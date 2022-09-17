@@ -28,23 +28,28 @@ S6,7 PIR: Motion detection sensor in two different parts of the room.
 ### Exploratory Data Analysis and Visualization:
 Exploring data and displaying it in a visual form is an important tool to help tell us a story, making it easy to understand by highlighting trends and outliers. Removing excess noise, gives us a clear picture and helps enable us to draw coherent conclusions about the data. The dataset has no null values so we didn't need to clean for missing values.
 We looked for correlated columns in the features and plotted a heatmap of all the features to do this.
-<img align="left" width="100" height="100" src="hhttps://github.com/ROH1TH/MLProject/blob/main/heatmap.png">
+![fig1](hhttps://github.com/ROH1TH/MLProject/blob/main/heatmap.png)
+
 A visual representation of the correlation among the various factors is displayed above using a heatmap. The darker the color higher is the negative correlation, as indicated by the values as well and vice versa. Factors having a correlation greater than 0.85 are considered to be highly correlated. Columns'S3_Temp', 'S4_Temp', 'S1_Light', and 'S5_CO2' were found to be highly correlated with other columsn so we chose to remove them when dealing with models that need independent features  as inputs to perform better
 
 The response/output variable for our project is distributed as follows
 ![fig2](https://github.com/ROH1TH/MLProject/blob/main/Imbalance%20plot.png)
+
 From the bar chart we can see that the records indicate 459 instances of when there was 1 person in the room, while there is a majority sweep of records of a count of 8228 which shows 0 occupants in the room with the least number of records of 459 with 1 person in the room.
 
 Exploring the time variable to see times at which the occupants are most.
 ![fig3](https://github.com/ROH1TH/MLProject/blob/main/time.png)
+
 The above histogram is indicative of the popular times that the room was occupied. We can see that the busiest times were between 10 am and 7 pm which are regular business hours.
 
 A few models work better with normally distributed features so checking the distribution of features
 ![fig4](https://github.com/ROH1TH/MLProject/blob/main/skewness.png)
+
 All 4 sounds columns are skewed to the left.
 
 LDA or Linear discriminant Analysis is used for dimension reduction, classification, and data visualization. We used LDA to project the data onto a 2 dimensional plane and check for clusters.
 ![fig5](https://github.com/ROH1TH/MLProject/blob/main/lda%20clusters.png)
+
 The data available to us can be clustered into different classes as shown above, which is indicative of its linearly separability and its ability to be utilized in exploring various machine learning classification models that work well with linearaly separable outcomes.
 
 Checking for outliers using boxplots
