@@ -42,10 +42,8 @@ Exploring the time variable to see times at which the occupants are most.
 
 The above histogram is indicative of the popular times that the room was occupied. We can see that the busiest times were between 10 am and 7 pm which are regular business hours.
 
-A few models work better with normally distributed features so checking the distribution of features
+A few models work better with normally distributed features so checking the distribution of features. The below plot shows all 4 sounds columns are skewed to the left.
 ![fig4](https://github.com/ROH1TH/MLProject/blob/main/skewness.png)
-
-All 4 sounds columns are skewed to the left.
 
 LDA or Linear discriminant Analysis is used for dimension reduction, classification, and data visualization. We used LDA to project the data onto a 2 dimensional plane and check for clusters.
 ![fig5](https://github.com/ROH1TH/MLProject/blob/main/lda%20clusters.png)
@@ -92,4 +90,4 @@ Considering the high correlation of a few of the features and the output variabl
 
 We need to split the data into training and testing datasets before we can go ahead with any model. We select our target variable as Room Occupancy and create a random state to make sure that all methods run in the same state. The models we are implementing is based on accuracy, the higher the accuracy, better the models perform. We split the data into 25% test set and 75% training dataset which is further split into 80% and 20% into training and validation data respectively. 
 
-#### 
+#### Neural Network
