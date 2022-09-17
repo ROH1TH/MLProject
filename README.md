@@ -28,7 +28,7 @@ S6,7 PIR: Motion detection sensor in two different parts of the room.
 ### Exploratory Data Analysis and Visualization:
 Exploring data and displaying it in a visual form is an important tool to help tell us a story, making it easy to understand by highlighting trends and outliers. Removing excess noise, gives us a clear picture and helps enable us to draw coherent conclusions about the data. The dataset has no null values so we didn't need to clean for missing values.
 We looked for correlated columns in the features and plotted a heatmap of all the features to do this.
-![fig1](https://github.com/ROH1TH/MLProject/blob/main/heatmap.png)
+<img align="left" width="100" height="100" src="hhttps://github.com/ROH1TH/MLProject/blob/main/heatmap.png">
 A visual representation of the correlation among the various factors is displayed above using a heatmap. The darker the color higher is the negative correlation, as indicated by the values as well and vice versa. Factors having a correlation greater than 0.85 are considered to be highly correlated. Columns'S3_Temp', 'S4_Temp', 'S1_Light', and 'S5_CO2' were found to be highly correlated with other columsn so we chose to remove them when dealing with models that need independent features  as inputs to perform better
 
 The response/output variable for our project is distributed as follows
