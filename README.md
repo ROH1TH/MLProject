@@ -28,30 +28,30 @@ S6,7 PIR: Motion detection sensor in two different parts of the room.
 ### Exploratory Data Analysis and Visualization:
 Exploring data and displaying it in a visual form is an important tool to help tell us a story, making it easy to understand by highlighting trends and outliers. Removing excess noise, gives us a clear picture and helps enable us to draw coherent conclusions about the data. The dataset has no null values so we didn't need to clean for missing values.
 We looked for correlated columns in the features and plotted a heatmap of all the features to do this.
-![fig1](C:\Users\kanak\Desktop\MLProject\heatmap.png)
+![fig1](https://github.com/ROH1TH/MLProject/blob/main/heatmap.png)
 
 A visual representation of the correlation among the various factors is displayed above using a heatmap. The darker the color higher is the negative correlation, as indicated by the values as well and vice versa. Factors having a correlation greater than 0.85 are considered to be highly correlated.
 
 The response/output variable for our project is distributed as follows
-![fig2](C:\Users\kanak\Desktop\MLProject\Imbalance plot.png)
+![fig2](https://github.com/ROH1TH/MLProject/blob/main/Imbalance%20plot.png)
 
 From the bar chart we can see that the records indicate 459 instances of when there was 1 person in the room, while there is a majority sweep of records of a count of 8228 which shows 0 occupants in the room with the least number of records of 459 with 1 person in the room.
 
 Exploring the time variable to see times at which the occupants are most.
-![fig3](C:\Users\kanak\Desktop\MLProject\time.png)
+![fig3](https://github.com/ROH1TH/MLProject/blob/main/time.png)
 
 The above histogram is indicative of the popular times that the room was occupied. We can see that the busiest times were between 10 am and 7 pm which are regular business hours.
 
 A few models work better with normally distributed features so checking the distribution of features. The below plot shows all 4 sounds columns are skewed to the left.
-![fig4](C:\Users\kanak\Desktop\MLProject\skewness.png)
+![fig4](https://github.com/ROH1TH/MLProject/blob/main/skewness.png)
 
 LDA or Linear discriminant Analysis is used for dimension reduction, classification, and data visualization. We used LDA to project the data onto a 2 dimensional plane and check for clusters.
-![fig5](C:\Users\kanak\Desktop\MLProject\lda clusters.png)
+![fig5](https://github.com/ROH1TH/MLProject/blob/main/lda%20clusters.png)
 
 The data available to us can be clustered into different classes as shown above, which is indicative of its linearly separability and its ability to be utilized in exploring various machine learning classification models that work well with linearly separable outcomes.
 
 Checking for outliers using boxplots
-![fig6](C:\Users\kanak\Desktop\MLProject\outliers.jpg)
+![fig6](https://github.com/ROH1TH/MLProject/blob/main/outliers.jpg)
 
 ### Data Pre-processing:
 **Under sampling and over-sampling**:
@@ -95,12 +95,12 @@ We considered a naive classifier as our baseline model which classifies a new da
 #### Neural Network
 We used keras to implement a 2 layer neural network. We tried a few different parameters to improve the performance of the neural network. To keep the model simple and efficient we used 2 hidden layers and 1 hidden layer of various sizes and found that the model performed better with 2 hidden layers of sizes 16 and 8 respectively and an output layer of 4 layers.
 We used the ReLu function in our hidden layer 1 and hidden layer 2 because it is simple, fast, and empirically appears to work well. As compared to the sigmoid and tanh functions, ReLu performed better on the validation data set. For the final output layer we used a ‘Softmax’ function so that we get the outputs for different class labels.
-![fig7](C:\Users\kanak\Desktop\MLProject\graph (1).png)
+
 We used ADAM  for the optimizer to provide an optimization algorithm capable of dealing with sparse gradients on noisy problems. We used the default configuration of ADAM with a change in learning rate to better suit out model. For the loss function  we used categorical cross entropy to calculate the error and soft max to obtain the output because SoftMax is ideal for multi class classification. 
 After trying various ranges of learning rates, regularization parameters, and number of epochs, a learning rate of 0.005, regularization parameter of 0.001 and 125 epochs resulted in the maximum accuracy on the validation dataset.
-![fig8](C:\Users\kanak\Desktop\MLProject\NN accuracy.jpg)
+![fig8](https://github.com/ROH1TH/MLProject/blob/main/NN%20accuracy.jpg)
 Epochs vs the training (blue) and testing accuracy (red)
-![fig9](C:\Users\kanak\Desktop\MLProject\NN error.jpg)
+![fig9](https://github.com/ROH1TH/MLProject/blob/main/NN%20error.jpg)
 Epochs vs the training (blue) and testing error (red)
 
 #### Multi class logistic regression
@@ -111,9 +111,9 @@ We got an accuracy of 89.46% with a learning rate of 0.0005 and regularization p
 #### K Nearest Neighbors
 KNN is a non-parametric algorithm, which means it makes no assumptions about the underlying distribution of the variables. We passed data which has been scaled and had its correlated columns removed, this is because collinearity effects distance-based algorithms. After passing the data, we tried alternate odd values of 'k' from 1 to 50 and plotted the first 10 on an elbow plot to obtain the k value which was giving us the least error rate on the validation data set.
 Elbow plot to select an optimum K value from odd numbers between 1 and 20.
-![fig10](C:\Users\kanak\Desktop\MLProject\KNN elbow.jpg)
+![fig10](https://github.com/ROH1TH/MLProject/blob/main/KNN%20elbow.jpg)
 From the elbow graph k=5 has the lowest error so taking k=5 we get the following results
-![fig11](C:\Users\kanak\Desktop\MLProject\knn results.jpg)
+![fig11](https://github.com/ROH1TH/MLProject/blob/main/knn%20results.jpg)
 
 ### Project Results
 After comparing the results of all the models, going by only accuracy the model performing the best was found to be K nearest neighbors, with a accuracy of 98.936%, followed by neural networks with an accuracy of 98.86%. 
